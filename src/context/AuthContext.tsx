@@ -16,25 +16,25 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
   const [user, setUser] = useState<string | null>(null);
   const [isAuthenticated, setIsAuthenticated] = useState(false);
 
-  // Check for existing user in localStorage on initial load
+  
   useEffect(() => {
     const storedUser = localStorage.getItem('user');
     if (storedUser) {
       setUser(storedUser);
-      setIsAuthenticated(true); // Set isAuthenticated to true if a user is found
+      setIsAuthenticated(true); 
     }
   }, []);
 
   const signIn = (user: string) => {
     setUser(user);
-    localStorage.setItem('user', user); // Persist user in localStorage
-    setIsAuthenticated(true); // Set isAuthenticated to true on sign-in
+    localStorage.setItem('user', user); 
+    setIsAuthenticated(true); 
   };
 
   const signOut = () => {
     setUser(null);
-    localStorage.removeItem('user'); // Remove user from localStorage
-    setIsAuthenticated(false); // Set isAuthenticated to false on sign-out
+    localStorage.removeItem('user'); 
+    setIsAuthenticated(false); 
   };
 
   return (

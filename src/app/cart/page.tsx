@@ -27,7 +27,7 @@ const CartPage = () => {
 
   return (
     <>
-      <div className='bg-[#FAFAFA] px-[32px]'>
+      <div className='bg-[#FAFAFA] px-[32px] font-sans'>
         <div className="flex items-center justify-center md:justify-start py-[24px] gap-[15px] max-w-[1161px] lg:mx-auto md:ml-[100px]">
           <Link href={'/'} className="text-[#252B42] font-bold">Home</Link>
           <MdOutlineArrowForwardIos height={16} width={8.6} />
@@ -39,17 +39,17 @@ const CartPage = () => {
 
           <div className='max-w-[654px] bg-[#FFFFFF] flex-1 mx-auto mb-4'>
             <div className="p-4 rounded-[4px]">
-              <h3 className='text-[24px] text-[#121517] font-semibold'>Shopping Cart</h3>
-              <div className='hidden md:flex items-center justify-between bg-[#3B4148] rounded-tr-[4px] rounded-tl-[4px] shadow-[#00000024] px-[24px] py-[17px] mt-[16px] mb-[32px]'>
-                <p className='text-[14px] text-[#FEFEFE] font-semibold'>Item Details</p>
-                <p className='text-[14px] text-[#FEFEFE] font-semibold'>Quantity</p>
-                <p className='text-[14px] text-[#FEFEFE] font-semibold'>Price</p>
+              <h3 className='text-[24px] text-[#121517] font-semibold text-center mb-5 hover:text-gray-500'>Shopping Cart</h3>
+              <div className='hidden md:flex items-center justify-between bg-red-50 rounded-tr-[4px] rounded-tl-[4px] shadow-[#00000024] px-[24px] py-[17px] mt-[16px] mb-[32px]'>
+                <p className='text-[14px] text-[#0e0d0d] font-semibold'>Item Details</p>
+                <p className='text-[14px] text-[#1a1919] font-semibold'>Quantity</p>
+                <p className='text-[14px] text-[#0f0f0f] font-semibold'>Price</p>
               </div>
               {cart.length === 0 ? (
                 <div className='flex flex-col items-center'>
-                  <p className='mb-1'>Your cart is empty</p>
+                  <p className='mb-5'>Your Shopping Cart is empty</p>
                   <Link href="/products">
-                    <span className="text-[#23A6F0] cursor-pointer border border-[#23A6F0] p-1 rounded-[4px]">Continue Shopping</span>
+                    <span className="text-[#23A6F0] cursor-pointer border p-4 rounded-[8px] hover:bg-yellow-300 hover:text-white">Continue Shopping</span>
                   </Link>
                 </div>
               ) : (

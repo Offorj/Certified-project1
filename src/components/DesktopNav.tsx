@@ -7,11 +7,11 @@ import { FaShoppingCart,FaSearch, FaRegHeart, FaRegUser, FaAngleDown } from 'rea
 
 
 const DesktopNav = () => {
-    const { cart } = useCart(); // Access cart from context
-    const { wishlist } = useWishlist(); // Access wishlist from context
+    const { cart } = useCart(); 
+    const { wishlist } = useWishlist(); 
     
-    const cartQuantity = cart.reduce((total, item) => total + item.quantity, 0); // Calculate total quantity in cart
-    const wishlistQuantity = wishlist.length; // Get the total number of items in wishlist
+    const cartQuantity = cart.reduce((total, item) => total + item.quantity, 0);
+    const wishlistQuantity = wishlist.length; 
 
     return (
         <div className='hidden md:flex justify-between lg:max-w-[1439px] md:px-[32px] md:py-[24px] m-auto font-sans'>

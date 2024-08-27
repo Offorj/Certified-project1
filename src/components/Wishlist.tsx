@@ -5,7 +5,7 @@ import { useWishlist } from '@/context/WishlistContext';
 import Image from 'next/image';
 import { MdDelete } from 'react-icons/md';
 
-const Wish = () => {
+const Wishlist = () => {
   const { wishlist, dispatch } = useWishlist(); 
 
   const handleRemove = (productId: number) => {
@@ -44,4 +44,4 @@ const Wish = () => {
   );
 };
 
-export default Wish;
+export default Wishlist;

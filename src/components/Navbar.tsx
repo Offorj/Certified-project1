@@ -26,13 +26,13 @@ const Navbar = () => {
     useEffect(() => {
         window.addEventListener('scroll', handleScroll);
 
-        // Clean up event listener on component unmount
+        
         return () => {
             window.removeEventListener('scroll', handleScroll);
         };
     }, []);
 
-    // Hide the navbar on Login and Signin pages
+
     if (pathname.includes('Login') || pathname.includes('Signup')) {
         return null;
     }

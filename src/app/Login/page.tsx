@@ -28,7 +28,7 @@ const Login = () => {
 
   return (
     <div className="max-w-md m-auto h-screen md:h-[88.5vh] px-[20px] flex items-center">
-      <div className="w-full max-w-md p-8 bg-black rounded-lg shadow-lg border-y-[2px] border-[#252B42]">
+      <div className="w-full max-w-md p-8 bg-indigo-50 rounded-lg shadow-lg border-y-[2px] border-[#252B42]">
       <h2 className="text-2xl font-bold mb-6 text-[#252B42]">Login</h2>
 
         <form onSubmit={handleSubmit}>
@@ -58,12 +58,7 @@ const Login = () => {
               {showPassword ? <FaEyeSlash /> : <FaEye />}
             </div>
           </div>
-          <button
-  type="submit"
-  className="w-full bg-[#252B42] text-white py-2 mt-4 rounded border-b-2 border-custom-green"
->
-  Login
-</button>
+          <button type="submit"className="w-full bg-[#252B42] text-white py-2 mt-4 rounded border-b-2 border-custom-green">Login</button>
 
         </form>
         <p className="text-center text-gray-600 mt-4">

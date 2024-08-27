@@ -111,14 +111,7 @@ export const Footer = ({ styles }: FooterProps) => {
                 </ul>
 
             </nav>
-            {/* <div className="bg-[#FAFAFA] py-[25px]">
-                <h6 className="text-center text-[#737373]">
-                    Project from <a href="https://www.altschoolafrica.com" target='_blank' className="text-[#23A6F0] hover:underline">Alt School</a>
-                </h6>
-                <p className="text-center text-[#737373] text-[12px] mt-2">
-                    Code by <a href="https://github.com/kingstech001"  target='_blank' className="text-[#23A6F0] hover:underline">Kings Tech</a>
-                </p>
-            </div> */}
+          
 
         </div>
     )

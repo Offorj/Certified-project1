@@ -1,18 +1,16 @@
 import Link from 'next/link';
-import { FaRegUser } from "react-icons/fa6";
-import { IoIosSearch, IoIosHeartEmpty } from "react-icons/io";
-import { BsCart } from "react-icons/bs";
+import { FaRegHeart, FaRegUser, FaSearch, FaShoppingCart } from "react-icons/fa";
 import Image from 'next/image';
-import { FiBarChart } from "react-icons/fi";
-import { useCart } from '@/context/CartContext'; // Import useCart
-import { useWishlist } from '@/context/WishlistContext'; // Import useWishlist
+import { FaBars } from "react-icons/fa";
+import { useCart } from '@/context/CartContext';
+import { useWishlist } from '@/context/WishlistContext'; 
 
 const MobileProductDetailNav = ({ isMenuOpen, toggleMenu }: any) => {
-    const { cart } = useCart(); // Access cart from context
-    const { wishlist } = useWishlist(); // Access wishlist from context
+    const { cart } = useCart(); 
+    const { wishlist } = useWishlist();
 
-    const cartQuantity = cart.reduce((total, item) => total + item.quantity, 0); // Calculate total quantity in cart
-    const wishlistQuantity = wishlist.length; // Get the total number of items in wishlist
+    const cartQuantity = cart.reduce((total, item) => total + item.quantity, 0);
+    const wishlistQuantity = wishlist.length; 
 
     return (
         <nav className='md:hidden font-sans'>
@@ -24,7 +22,7 @@ const MobileProductDetailNav = ({ isMenuOpen, toggleMenu }: any) => {
                 </div>
                 <div className="flex items-center gap-[15px]">
                     <button onClick={toggleMenu}>
-                        <FiBarChart height={24} width={24} className="transform -rotate-90" />
+                        <FaBars height={24} width={24}  />
                     </button>
                 </div>
             </div>
@@ -47,9 +45,9 @@ const MobileProductDetailNav = ({ isMenuOpen, toggleMenu }: any) => {
                             /
                             <li><Link href="/Signup">Register</Link></li>
                         </div>
-                        <li><IoIosSearch className='m-auto' /></li>
+                        <li><FaSearch className='m-auto' /></li>
                         <li className='flex items-center gap-[2px]'><Link href="/cart" className="text-[#23A6F0] hover:text-blue-700">
-                        <BsCart />
+                        <FaShoppingCart />
                     </Link>
                     {cartQuantity > 0 && (
                         <span className=" text-[#23A6F0] text-[20px]  py-1">
@@ -58,7 +56,7 @@ const MobileProductDetailNav = ({ isMenuOpen, toggleMenu }: any) => {
                     )}</li>
                         <li className='flex items-center gap-[2px]'>
                     <Link href="/wishlist" className="text-[#23A6F0] hover:text-blue-700">
-                        <IoIosHeartEmpty className='text-[#23A6F0] hover:text-blue-700' />
+                        <FaRegHeart className='text-[#23A6F0] hover:text-blue-700' />
                     </Link>
                     {wishlistQuantity > 0 && (
                         
